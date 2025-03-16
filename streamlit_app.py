@@ -36,9 +36,10 @@ pd_df=my_dataframe.to_pandas()
 
 # Let users choose ingredients
 ingredients_list = st.multiselect(
-    'Choose up to 5 ingredients:',
-    my_dataframe['FRUIT_NAME'].to_list(),  # Convert to list for Streamlit compatibility
-    max_selections=5
+    'Choose up to 5 ingredients:'
+    ,my_dataframe
+    ,max_selections=5
+    
 )
 
 if ingredients_list:
